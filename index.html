@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Ultimate Meme Collection</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="confetti-container" id="confetti-container"></div>
+    
+    <header>
+        <h1 class="bouncy-text">The Ultimate Meme Collection</h1>
+        <div class="header-buttons">
+            <button id="theme-toggle" class="fun-button"><i class="fas fa-moon"></i> Toggle Dark Mode</button>
+            <button id="confetti-button" class="fun-button"><i class="fas fa-party-horn"></i> Make It Rain!</button>
+        </div>
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Search for memes...">
+            <button id="search-button" class="fun-button"><i class="fas fa-search"></i></button>
+        </div>
+        <div class="filter-container">
+            <button class="filter-button active" data-category="all">All Memes</button>
+            <button class="filter-button" data-category="classic">Classic</button>
+            <button class="filter-button" data-category="reaction">Reaction</button>
+            <button class="filter-button" data-category="animal">Animal</button>
+        </div>
+    </header>
+    
+    <main>
+        <div class="meme-container" id="meme-container">
+            <!-- Memes will be loaded here via JavaScript -->
+        </div>
+    </main>
+    
+    <div id="meme-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <div class="modal-body">
+                <img id="modal-image" src="" alt="Meme">
+                <h2 id="modal-title"></h2>
+                <p id="modal-description"></p>
+                <div class="reaction-buttons">
+                    <button class="reaction-button" id="like-button">
+                        <i class="fas fa-thumbs-up"></i> <span id="like-count">0</span>
+                    </button>
+                    <button class="reaction-button" id="share-button">
+                        <i class="fas fa-share"></i> Share
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>© 2023 The Ultimate Meme Collection | Created with <i class="fas fa-heart"></i> and lots of laughs</p>
+        <button id="scroll-top" class="fun-button"><i class="fas fa-arrow-up"></i> Back to Top</button>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
